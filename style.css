@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --background-body: #f3f3f3;
+    --background-box: #4800ff;
+    --color-box: #000000;
+    --background-button: #ffff;
+    --color-button: #000000;
+    --background-resultado: #ffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 200ms;
+
+}
+
 body,
 html {
-    background-color: var(--body-bg);
+    background-color: var(--background-body);
     font-family: poppins, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
@@ -13,19 +31,141 @@ html {
     overflow-x: hidden;
 }
 
-.calculadora{
+
+#calculadora {
     text-align: center;
-    background-color: rgb(72, 0, 255);
-    padding: 6em;
+    font-size: 1.4em;
+    background-color: var(--background-box);
+    color: var(--color-box);
+    padding: 3em;
     border-radius: 20px;
     box-shadow: 15px 15px 20px #00000065;
 }
 
-input{
-    width: 50%;
+input {
+    border: none;
+    outline: 0;
 }
 
-#resultado{
-    font-size: 35px;
-    font-weight: 600;
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+}
+
+.selection {
+    padding: 0.25em;
+}
+
+
+.selection label {
+    margin-top: 30px;
+    font-size: 1.3em;
+    border: none;
+}
+
+.selection input {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 5px 5px 25px #00000052;
+
+}
+
+
+.button {
+    padding-top: 0.45em;
+
+}
+
+.button button {
+    border: none;
+    outline: none;
+    width: 50%;
+    height: 1.75em;
+    border-radius: 5px;
+    font-size: 0.95em;
+    background-color: var(--background-button);
+    color: var(--color-button);
+    box-shadow: 5px 5px 25px #00000052;
+}
+
+.button button:hover {
+    width: 75%;
+    cursor: pointer;
+
+}
+
+#reply {
+    display: none;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: var(--background-box);
+    color: var(--color-box);
+    padding: 5em;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px #00000065;
+}
+
+.back {
+    padding-top: 0.75em;
+}
+
+.back button {
+    border: none;
+    outline: none;
+    width: 75%;
+    height: 1.75em;
+    border-radius: 5px;
+    font-size: 0.95em;
+    background-color: var(--background-button);
+    color: var(--color-button);
+    box-shadow: 5px 5px 25px #00000052;
+
+}
+
+.back button:hover {
+    width: 100%;
+}
+
+#subtitle {
+    display: none;
+    font-size: 1.5em;
+    font-weight: 400;
+
+}
+
+
+#resultado {
+    display: none;
+    font-size: 1.2em;
+    color: var(--background-box);
+    padding: 0.25em;
+    background-color: var(--background-resultado);
+
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body,
+    html {
+        background-color: #4800ff;
+    }
+
+    #calculadora {
+        box-shadow: none;
+    }
+
+    #reply {
+        box-shadow: none;
+    }
 }
