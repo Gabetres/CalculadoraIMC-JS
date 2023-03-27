@@ -5,6 +5,7 @@ function calcularimc() {
 
     if (isNaN(imc)) {
         document.getElementById("resultado").textContent = "Digite um valor válido";
+        document.getElementById("indice").style.display = "none";
         document.getElementById("resultado").style.fontSize = "1em";
     } else {
         document.getElementById("resultado").textContent = imc.toFixed(2);
@@ -14,6 +15,37 @@ function calcularimc() {
     document.getElementById("reply").style.display = "inline";
     document.getElementById("resultado").style.display = "block";
     document.getElementById("subtitle").style.display = "inline";
+
+    if(imc < 18.5){
+        document.getElementById("indice").style.display = "inline";
+        document.getElementById("indice").textContent = "Abaixo do peso"
+    }
+   
+    if(imc >= 18.5){
+        document.getElementById("indice").style.display = "inline";
+        document.getElementById("indice").textContent = "Peso ideal" 
+    }
+
+    if(imc >= 25){
+        document.getElementById("indice").style.display = "inline";
+        document.getElementById("indice").textContent = "Levemente acima do peso" 
+    }
+    if(imc >= 30){
+        document.getElementById("indice").style.display = "inline";
+        document.getElementById("indice").textContent = "Obesidade" 
+    }
+
+    if(imc >= 35){
+        document.getElementById("indice").style.display = "inline";
+        document.getElementById("indice").textContent = "Obesidade Severa";
+    }
+
+    if(imc >= 40){
+        document.getElementById("indice").style.display = "inline";
+        document.getElementById("indice").textContent = "Obesidade Mórbida";
+    }
+
+
 }
 
 function back() {
@@ -21,8 +53,3 @@ function back() {
     document.getElementById("reply").style.display = "none";
 
 }
-
-
-
-
-
