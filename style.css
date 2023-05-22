@@ -159,6 +159,10 @@ input[type=number] {
     font-weight: 600;
 }
 
+a{
+    color: #000000;
+}
+
 footer{
     padding-top: 0.55em;
     font-weight: 600;
@@ -183,6 +187,10 @@ footer > strong{
 
     #reply {
         box-shadow: none;
+    }
+
+    a{
+        color: #ffffff;
     }
 
     footer{
